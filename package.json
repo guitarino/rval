@@ -2,7 +2,7 @@
   "name": "rval",
   "version": "0.1.0",
   "description": "Intuitive way of doing reactive programming",
-  "main": "build/rval.node.js",
+  "main": "./build/rval.node.js",
   "scripts": {
     "test": "mocha",
     "build-browser": "uglifyjs -nc -o ./build/rval.js ./src/rval.js && concat -o ./build/rval.js ./src/license.js ./build/rval.js",

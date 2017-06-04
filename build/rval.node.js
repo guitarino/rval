@@ -220,7 +220,10 @@ var rval = function(g) {
    * @param {object} o - reactive object to disconnect
    */
   rval.discon = function(o) {
-    removeMeFromUpdateLists(o, privacy(o).dependencies);
+    var priv = privacy(o);
+    removeMeFromUpdateLists(o, priv.dependencies);
+    priv.dependencies = [];
+    delete priv.fun;
   };
 
   return rval;
