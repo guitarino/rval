@@ -24,7 +24,7 @@ In incremental or reactive programming, when a piece of data changes, only the o
 
 Standard libraries for reactive programming are powerful, but are more conceptually involved.
 
-The idea behind `rval` is simple: we create some reactive objects (reactive functions and reactive objects) that depend on *other* reactive objects.
+The idea behind `rval` is simple: we create some reactive objects (i.e. reactive functions and reactive values) that depend on *other* reactive objects.
 
 For example,
 
