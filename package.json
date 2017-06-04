@@ -1,0 +1,29 @@
+{
+  "name": "rval",
+  "version": "0.1.0",
+  "description": "Intuitive way of doing reactive programming",
+  "main": "build/rval.node.js",
+  "scripts": {
+    "test": "mocha",
+    "build-browser": "uglifyjs -nc -o ./build/rval.js ./src/rval.js && concat -o ./build/rval.js ./src/license.js ./build/rval.js",
+    "build-npm": "concat -o ./build/rval.node.js ./src/license.js ./src/rval.js ./src/rval.exports.js",
+    "build": "npm run build-browser && npm run build-npm",
+    "install-global-deps": "npm install -g uglify-js@1 && npm install -g concat && npm install -g mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guitarino/rval.git"
+  },
+  "keywords": [
+    "reactive",
+    "incremental",
+    "spreadsheet",
+    "dependency"
+  ],
+  "author": "Kirill Shestakov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guitarino/rval/issues"
+  },
+  "homepage": "https://github.com/guitarino/rval#readme"
+}
